@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 18:34:50 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/28 19:32:07 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/05/28 21:26:04 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,18 @@ int	main(int ac, char **av)
 	tmp = clone_struct(a);
 	if (if_close_to_sorted(tmp, max_index, 0, max_index))
 	{
+		almost_sorted(&a);
+
+		if (success)
+		{
+			t_s *test = a;
+			while (test)
+			{
+				printf("A _ %d\n", test->index);
+				test = test->next;
+			}
+		}
+
 		return (0);
 		// функция которая ищет минимальное количество сдвигов
 	}

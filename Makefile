@@ -4,7 +4,8 @@ SRC =	push_swap.c \
 		array_maker.c \
 		alkoritms.c \
 		butterfly.c \
-		corner_case.c
+		corner_case.c \
+		almost_sorted.c
 
 OBJS = $(SRC:.c=.o)
 

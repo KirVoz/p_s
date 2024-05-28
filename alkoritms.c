@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 17:16:55 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/28 17:00:10 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/05/28 21:17:48 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,15 @@ void	push(t_s **from, t_s **to)
 	(*to)->next = tmp_to;
 }
 
-void	ra(t_s **a)
-{
-	rotate(a, 1);
-	write(1, "ra\n", 3);
-}
-
-void	rb(t_s **b, int how_many_times)
+void	rb_ra(t_s **b, int how_many_times, int num)
 {
 	rotate(b, how_many_times);
 	while (how_many_times)
 	{	
-		write(1, "rb\n", 3);
+		if (num == 1)
+			write(1, "rb\n", 3);
+		else
+			write(1, "rb\n", 3);	
 		how_many_times--;
 	}
 }
@@ -92,12 +89,15 @@ void	reverse_rotate(t_s **stack, int how_many_times)
 	}
 }
 
-void	rrb(t_s **b, int how_many_times)
+void	rrb_rra(t_s **b, int how_many_times, int num)
 {
 	reverse_rotate(b, how_many_times);
 	while (how_many_times)
 	{
-		write(1, "rrb\n", 4);
+		if (num == 1)
+			write(1, "rrb\n", 4);
+		else
+			write(1, "rra\n", 4);
 		how_many_times--;
 	}
 }

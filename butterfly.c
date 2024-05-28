@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 12:13:22 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/28 17:31:36 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/05/28 21:20:33 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	butterfly_sort(t_s **a, t_s **b)
 		if ((*a)->index <= i)
 		{
 			pb(a, b);
-			rb(b, 1);
+			rb_ra(b, 1, 1);
 			i++;
 		}
 		else if ((*a)->index <= i + m)
@@ -49,7 +49,7 @@ void	butterfly_sort(t_s **a, t_s **b)
 			i++;
 		}
 		else
-			ra(a);
+			rb_ra(a, 1, 0);
 		m = magic(list_length(*a));
 	}
 }
@@ -78,9 +78,9 @@ void	rotate_up_or_down(t_s **b, int max_index)
 		tmp = tmp->next;
 	}
 	if (i <= list_length(*b) / 2) // 5 / 2 = 2 >= i
-		rb(b, i);
+		rb_ra(b, i, 1);
 	else
-		rrb(b, list_length(*b) - i);
+		rrb_rra(b, list_length(*b) - i, 1);
 }
 
 
