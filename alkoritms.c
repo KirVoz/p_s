@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 17:16:55 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/28 21:17:48 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/05/30 20:20:51 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	rb_ra(t_s **b, int how_many_times, int num)
 		if (num == 1)
 			write(1, "rb\n", 3);
 		else
-			write(1, "rb\n", 3);	
+			write(1, "ra\n", 3);	
 		how_many_times--;
 	}
 }
