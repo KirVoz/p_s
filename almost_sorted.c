@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 21:05:38 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/28 21:24:07 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/01 20:24:53 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ void	almost_sorted(t_s **a)
 		rb_ra(a, i, 0);
 	else
 		rrb_rra(a, list_length(*a) - i, 0);
+	exit (1);
 }

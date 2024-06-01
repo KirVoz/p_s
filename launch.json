@@ -9,7 +9,7 @@
 			"request": "launch",
 			"name": "Debug",
 			"program": "/Users/kvoznese/Desktop/./push_swap",
-			"args": ["2 0 1"],
+			"args": ["0 1 3 4 2"],
 			"cwd": "${workspaceFolder}"
 		}
 	]
