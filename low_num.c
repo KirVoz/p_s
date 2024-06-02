@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 15:08:38 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/06/01 20:30:32 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/02 18:19:42 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	sort_5(t_s **a, t_s **b, int max_index)
 		else
 		{
 			j = find_two_lowest(a, i);
-			if (j <= 2)
+			if (j <= 3)
 				rb_ra(a, j, 0);
 			else
 				rrb_rra(a, max_index + 1 - j, 0);
@@ -75,15 +75,11 @@ int	find_two_lowest(t_s **a, int i)
 
 void	sort_3(t_s **a, int overwatch, int max_index)
 {
-	t_s *tmp;
-
-	tmp = *a;
-	if (tmp->index == max_index)
+	if ((*a)->index == max_index)
 		rb_ra(a, 1, 0);
-	else if (tmp->next->index == max_index)
+	else if ((*a)->next->index == max_index)
 		rrb_rra(a, 1, 0);
-	tmp = *a;
-	if (tmp->next->index < tmp->next->next->index)
+	if ((*a)->next->index < (*a)->index) 
 		sa(a);
 	if (overwatch == 0)
 		exit (1);
