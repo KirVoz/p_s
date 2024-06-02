@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 21:05:38 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/06/01 20:24:53 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/02 18:37:25 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	almost_sorted(t_s **a)
 {
-	t_s *tmp;
-	int i;
-	
+	t_s	*tmp;
+	int	i;
+
 	i = 0;
 	tmp = *a;
 	while (tmp && tmp->index != 0)

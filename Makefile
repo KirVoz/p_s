@@ -3,6 +3,7 @@ SRC =	push_swap.c \
 		initiation.c \
 		array_maker.c \
 		alkoritms.c \
+		alcoritms2.c \
 		butterfly.c \
 		corner_case.c \
 		almost_sorted.c \

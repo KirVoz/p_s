@@ -34,8 +34,7 @@ SRC = str/ft_atoi.c \
 	  fd/ft_putendl_fd.c \
 	  fd/ft_putnbr_fd.c \
 	  get_next_line/get_next_line.c \
-	  get_next_line/get_next_line_utils.c \
-	  gnl.c 
+	  get_next_line/get_next_line_utils.c 
 
 BONUS = list/ft_lstnew.c \
 		list/ft_lstadd_front.c \

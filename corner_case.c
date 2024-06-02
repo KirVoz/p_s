@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 20:47:14 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/06/01 17:20:20 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/02 19:03:48 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	corner_case(t_s *a, int index)
 {
-	t_s *tmp;
-	int i;
+	t_s	*tmp;
+	int	i;
 
 	tmp = a;
 	i = 0;
@@ -33,10 +33,10 @@ int	corner_case(t_s *a, int index)
 
 int	if_close_to_sorted(t_s *a, int max_index, int min_index, int len)
 {
-	t_s *tmp;
-	t_s *prev_start;
-	int i;
-	
+	t_s	*tmp;
+	t_s	*prev_start;
+	int	i;
+
 	prev_start = a;
 	tmp = a;
 	while (tmp->next)
@@ -61,7 +61,7 @@ t_s	*find_min(t_s *tmp, int min_index)
 	while (tmp)
 	{
 		if (min_index == tmp->index)
-			break;
+			break ;
 		tmp = tmp->next;
 	}
 	return (tmp);
@@ -69,9 +69,9 @@ t_s	*find_min(t_s *tmp, int min_index)
 
 t_s	*clone_struct(t_s *a)
 {
-	t_s *new;
-	t_s *node;
-	t_s *tmp_a;
+	t_s	*new;
+	t_s	*node;
+	t_s	*tmp_a;
 
 	new = NULL;
 	tmp_a = a;
@@ -87,6 +87,5 @@ t_s	*clone_struct(t_s *a)
 		ft_lstadd_back(&new, node);
 		tmp_a = tmp_a->next;
 	}
-	
 	return (new);
 }

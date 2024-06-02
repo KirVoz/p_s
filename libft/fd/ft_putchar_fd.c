@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 14:58:50 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/04/26 16:58:07 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/02 19:30:13 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1); 
+	write(fd, &c, 1);
 }

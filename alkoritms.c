@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 17:16:55 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/30 20:20:51 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/02 18:36:40 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ void	pb(t_s **a, t_s **b)
 	push(a, b);
 	write(1, "pb\n", 3);
 }
+
 void	push(t_s **from, t_s **to)
 {
-	t_s *tmp_from;
-	t_s *tmp_to;
-	
+	t_s	*tmp_from;
+	t_s	*tmp_to;
+
 	tmp_from = *from;
 	tmp_to = *to;
 	*from = (*from)->next;
@@ -39,19 +40,19 @@ void	rb_ra(t_s **b, int how_many_times, int num)
 {
 	rotate(b, how_many_times);
 	while (how_many_times)
-	{	
+	{
 		if (num == 1)
 			write(1, "rb\n", 3);
 		else
-			write(1, "ra\n", 3);	
+			write(1, "ra\n", 3);
 		how_many_times--;
 	}
 }
 
 void	rotate(t_s **stack, int how_many_times)
 {
-	t_s *new_start;
-	t_s *tail;
+	t_s	*new_start;
+	t_s	*tail;
 
 	while (how_many_times)
 	{
@@ -65,39 +66,6 @@ void	rotate(t_s **stack, int how_many_times)
 			(*stack)->next = NULL;
 			*stack = new_start;
 		}
-		how_many_times--;
-	}
-}
-
-void	reverse_rotate(t_s **stack, int how_many_times)
-{
-	t_s	*cur;
-	t_s	*prev;
-
-	while (how_many_times)
-	{
-		cur = *stack;
-		while (cur->next)
-		{
-			prev = cur;
-			cur = cur->next;
-		}
-		prev->next = NULL;
-		cur->next = *stack;
-		*stack = cur;
-		how_many_times--;
-	}
-}
-
-void	rrb_rra(t_s **b, int how_many_times, int num)
-{
-	reverse_rotate(b, how_many_times);
-	while (how_many_times)
-	{
-		if (num == 1)
-			write(1, "rrb\n", 4);
-		else
-			write(1, "rra\n", 4);
 		how_many_times--;
 	}
 }

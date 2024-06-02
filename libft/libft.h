@@ -6,7 +6,7 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 03:16:28 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/25 15:39:28 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/02 19:31:38 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef struct s_struct
 	int				index;
 	struct s_struct	*next;
 }					t_s;
-
 
 int		ft_atoi(const char *str, int *overflow);
 void	ft_bzero(void *s, size_t n);
@@ -90,8 +89,8 @@ char	*ft_strjoin_gnl(char *s1, const char *s2, int len);
 
 /////////gnltest/////////
 
-char	*null_calloc(char **str, unsigned int count, unsigned int size);
-char	*join(char *s, char c);
-char	*gnl(int fd);
+// char	*null_calloc(char **str, unsigned int count, unsigned int size);
+// char	*join(char *s, char c);
+// char	*gnl(int fd);
 
 #endif

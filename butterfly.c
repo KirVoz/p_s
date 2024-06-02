@@ -6,16 +6,16 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 12:13:22 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/30 17:23:15 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/02 19:02:26 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		magic(int n)
+int	magic(int n)
 {
 	int	m;
-	
+
 	m = 1;
 	if (n < 50)
 		m = 3 + (n - 6) / 7;
@@ -32,9 +32,9 @@ int		magic(int n)
 
 void	butterfly_sort(t_s **a, t_s **b)
 {
-	int 	m;
-	int		i;
-	
+	int	m;
+	int	i;
+
 	i = 0;
 	m = magic(list_length(*a));
 	while (*a)
@@ -69,79 +69,18 @@ void	back_to_a(t_s **a, t_s **b, int max_index)
 
 void	rotate_up_or_down(t_s **b, int max_index)
 {
-	t_s *tmp;
-	int i;
-	
+	t_s	*tmp;
+	int	i;
+
 	tmp = *b;
-	i  = 0;
+	i = 0;
 	while (*b && tmp->index != max_index)
 	{
 		i++;
 		tmp = tmp->next;
 	}
-	if (i <= list_length(*b) / 2) // 5 / 2 = 2 >= i
+	if (i <= list_length(*b) / 2)
 		rb_ra(b, i, 1);
 	else
 		rrb_rra(b, list_length(*b) - i, 1);
 }
-
-
-// void back_to_a(t_s **a, t_s **b, int max_index)
-// {
-// 	t_s *tmp;
-// 	int i;
-	
-// 	tmp = *b;
-// 	while (max_index >= 0 && *b)
-// 	{
-// 		i = 0;
-// 		while (*b && tmp->next)
-// 		{
-// 			if (max_index == tmp->index)
-// 			{
-// 				pa(a, b);
-// 				break;
-// 			}
-// 			i++;
-// 			tmp = tmp->next;
-// 		}
-// 		if (i <= list_length(*b) / 2 && i >= 0)
-// 		{
-// 			rb(b, i);
-// 			pa(a, b);
-// 		}
-// 		else
-// 		{	rrb(b, list_length(*b) - i && i >= 0);
-// 			pa(a, b);
-// 		}
-// 		max_index--;
-// 	}
-// }
-
-// void	back_to_a(t_s **a, t_s **b, int max_index)
-// {
-// 	t_s *tmp;
-// 	int i;
-	
-// 	tmp = *b;
-// 	while (tmp)
-// 	{
-// 		i = 0;
-// 		while (max_index != tmp->index && tmp->next)
-// 		{
-// 			tmp = tmp->next;
-// 			i++;
-// 		}
-// 		if (i == list_length(*b))
-// 			rrb(b, 1);
-// 		else if (list_length(*b) - i < list_length(*b) / 2)
-// 			rrb(b, list_length(*b) - i);
-// 		else if (list_length(*b) - i > list_length(*b) / 2)
-// 			rb(b, i);
-// 		max_index--;
-// 		pa(a, b);
-// 		max_index--;
-// 	}
-// }
-
-

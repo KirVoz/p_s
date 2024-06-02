@@ -6,17 +6,17 @@
 /*   By: kvoznese <kvoznese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:06:57 by kvoznese          #+#    #+#             */
-/*   Updated: 2024/05/28 17:31:36 by kvoznese         ###   ########.fr       */
+/*   Updated: 2024/06/02 18:39:32 by kvoznese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		list_length(t_s *a)
+int	list_length(t_s *a)
 {
-	t_s *tmp;
-	int i;
-	
+	t_s	*tmp;
+	int	i;
+
 	i = 0;
 	tmp = a;
 	while (tmp)
@@ -29,10 +29,10 @@ int		list_length(t_s *a)
 
 void	make_array_great_again(int *arr, t_s *a)
 {
-	int len;
-	int i;
-	int tmp;
-	
+	int	len;
+	int	i;
+	int	tmp;
+
 	len = list_length(a);
 	while (--len)
 	{
@@ -49,13 +49,14 @@ void	make_array_great_again(int *arr, t_s *a)
 		}
 	}
 }
-int		*make_array(t_s *a)
+
+int	*make_array(t_s *a)
 {
-	t_s *tmp;
-	int len;
+	t_s	*tmp;
+	int	len;
 	int	*array;
-	int i;
-	
+	int	i;
+
 	i = 0;
 	len = list_length(a);
 	array = malloc(sizeof(int) * len);
@@ -74,8 +75,8 @@ void	make_indexes_for_struct(t_s *a)
 {
 	t_s	*tmp;
 	int	*arr;
-	int i;
-	int l;
+	int	i;
+	int	l;
 
 	l = list_length(a);
 	arr = make_array(a);
